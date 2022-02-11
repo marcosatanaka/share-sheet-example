@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController title="Image" id="ObA-dk-sSI" customClass="ActionViewController" customModule="PlayActionExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-Dm-cuz">
+                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="3HJ-uW-3hn">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="WYi-yp-eM6">
+                                            <connections>
+                                                <action selector="done" destination="ObA-dk-sSI" id="Qdu-qn-U6V"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VLM-HK-BTo">
+                                <rect key="frame" x="100" y="158" width="120" height="116.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="JiX-bQ-bhu"/>
+                                    <constraint firstAttribute="width" constant="120" id="V4H-iS-VdX"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="HFv-4I-Mgc">
+                                <rect key="frame" x="141.5" y="247" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adding to Play..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjW-11-MVo">
+                                <rect key="frame" x="24" y="316" width="272" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXn-6d-LLw">
+                                <rect key="frame" x="24" y="358" width="272" height="29"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <menu key="menu" id="7ae-bJ-OgV">
+                                    <children>
+                                        <command title="Item 1" id="PLp-JS-86e"/>
+                                        <command title="Item 2" id="zVX-Rc-eTb"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Add Tag..."/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VVe-Uw-JpX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VVe-Uw-JpX" firstAttribute="trailing" secondItem="cXn-6d-LLw" secondAttribute="trailing" constant="24" id="0mj-NF-90z"/>
+                            <constraint firstItem="VLM-HK-BTo" firstAttribute="centerX" secondItem="VVe-Uw-JpX" secondAttribute="centerX" id="6Hv-K3-34E"/>
+                            <constraint firstItem="VVe-Uw-JpX" firstAttribute="trailing" secondItem="NOA-Dm-cuz" secondAttribute="trailing" id="A05-Pj-hrr"/>
+                            <constraint firstItem="mjW-11-MVo" firstAttribute="top" secondItem="HFv-4I-Mgc" secondAttribute="bottom" constant="32" id="CqU-66-JQd"/>
+                            <constraint firstItem="NOA-Dm-cuz" firstAttribute="leading" secondItem="VVe-Uw-JpX" secondAttribute="leading" id="HxO-8t-aoh"/>
+                            <constraint firstItem="cXn-6d-LLw" firstAttribute="top" secondItem="mjW-11-MVo" secondAttribute="bottom" constant="26" id="TK6-8g-yJb"/>
+                            <constraint firstItem="VLM-HK-BTo" firstAttribute="centerY" secondItem="VVe-Uw-JpX" secondAttribute="centerY" constant="-70" id="ZKq-RT-cXl"/>
+                            <constraint firstItem="cXn-6d-LLw" firstAttribute="leading" secondItem="VVe-Uw-JpX" secondAttribute="leading" constant="24" id="fDW-4E-eV2"/>
+                            <constraint firstItem="mjW-11-MVo" firstAttribute="top" secondItem="VLM-HK-BTo" secondAttribute="bottom" constant="40" id="fYs-6r-aMX"/>
+                            <constraint firstItem="VVe-Uw-JpX" firstAttribute="trailing" secondItem="mjW-11-MVo" secondAttribute="trailing" constant="24" id="jVU-lp-PqR"/>
+                            <constraint firstItem="HFv-4I-Mgc" firstAttribute="centerX" secondItem="VVe-Uw-JpX" secondAttribute="centerX" id="lBs-c4-zyr"/>
+                            <constraint firstItem="mjW-11-MVo" firstAttribute="leading" secondItem="VVe-Uw-JpX" secondAttribute="leading" constant="24" id="vHN-sp-TZJ"/>
+                            <constraint firstItem="NOA-Dm-cuz" firstAttribute="top" secondItem="VVe-Uw-JpX" secondAttribute="top" id="we0-1t-bgp"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="HFv-4I-Mgc" id="32T-uN-4hM"/>
+                        <outlet property="imageView" destination="VLM-HK-BTo" id="B2N-Ln-DFy"/>
+                        <outlet property="subtitleLabel" destination="mjW-11-MVo" id="cV1-mX-VNQ"/>
+                        <outlet property="tagsButton" destination="cXn-6d-LLw" id="hbj-PK-tfS"/>
+                        <outlet property="view" destination="zMn-AG-sqS" id="Qma-de-2ek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
